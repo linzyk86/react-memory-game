@@ -6,6 +6,9 @@ function Card(props) {
     let matchCards = []
     let openCards = []
 
+   
+//Shuffle function from Stack Overflow............//
+    
     function shuffleArray(array) {
         let i = array.length - 1;
         for (; i > 0; i--) {
@@ -19,8 +22,9 @@ function Card(props) {
     shuffleArray(props.cards)
 
 
-    function clickHandler(e) {
 
+    function clickHandler(e) {
+        
         if (openCards.length === 0) {
             let card1 = e.target
             card1.classList.remove('closed')
@@ -34,10 +38,8 @@ function Card(props) {
             card2.classList.add('open')
             openCards.push(card2)
             console.log(openCards)
-
-
-
         }
+
         if (openCards.length === 2) {
             let card1 = openCards[1]
             let card2 = openCards[0]
@@ -47,7 +49,6 @@ function Card(props) {
                 console.log('Matched!!')
                 matchCards.push(card1, card2)
                 openCards = []
-
             }
             else {
                 setTimeout(function () {
@@ -59,18 +60,25 @@ function Card(props) {
                 }, 1000);
                 openCards = []
             }
-            if (matchCards.length === 16) {
-                alert('You WIN!')
+            
 
-            }
 
         }
+        if (matchCards.length === 16) {
+            alert('You WIN!')
+            matchCards = []
+            openCards = []
+            props.cards.classList.remove("open")
+            props.cards.classList.add("closed")
     }
+       
+    }
+     
 
     return (
         <div>
             <h1>Memory Game</h1>
-            <h3> Click two cards and try for a match</h3>
+            <h3> Click two cards and try to match them all!</h3>
             <div className='deck'>
                 {props.cards.map(card => {
                     return <i className={`${card} closed`} onClick={clickHandler} key={card.id} />
