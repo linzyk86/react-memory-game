@@ -1,5 +1,7 @@
 import './App.css';
-import Card from './components/Card'
+import Card from './components/Card';
+import Timer from './components/Timer';
+import Header from './components/Header';
 
 
 let cards = ["far fa-gem", "far fa-gem",
@@ -16,6 +18,8 @@ let cards = ["far fa-gem", "far fa-gem",
 function App() {
   return (
     <div className="App">
+      <Header />
+      <Timer />
      <Card cards = {cards}/>
     </div>
   );

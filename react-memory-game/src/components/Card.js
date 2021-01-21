@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 function Card(props) {
     let matchCards = []
     let openCards = []
-
+    let moves = 0
    
 //Shuffle function from Stack Overflow............//
     
@@ -38,9 +38,11 @@ function Card(props) {
             card2.classList.add('open')
             openCards.push(card2)
             console.log(openCards)
+            
         }
 
         if (openCards.length === 2) {
+            moves+=1
             let card1 = openCards[1]
             let card2 = openCards[0]
             console.log(card1.value, card2.clasList)
@@ -77,8 +79,7 @@ function Card(props) {
 
     return (
         <div>
-            <h1>Memory Game</h1>
-            <h3> Click two cards and try to match them all!</h3>
+           <div className = 'moves'><h3>Moves:{moves}</h3></div>
             <div className='deck'>
                 {props.cards.map(card => {
                     return <i className={`${card} closed`} onClick={clickHandler} key={card.id} />
