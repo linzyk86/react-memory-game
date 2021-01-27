@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 import Timer from './Timer';
 import Header from './Header';
 
@@ -6,8 +6,8 @@ import Header from './Header';
 
 
 function Card(props) {
-    const [moves, setMoves]= useState(0)
-    const [score, setScore] = useState(0)
+    // const [moves, setMoves]= useState(0)
+    // const [score, setScore] = useState(0)
     let matchCards = []
     let openCards = []
   
