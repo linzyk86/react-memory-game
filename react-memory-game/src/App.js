@@ -1,8 +1,6 @@
 import './App.css';
+import React from 'react'
 import Card from './components/Card';
-import Timer from './components/Timer';
-import Header from './components/Header';
-
 
 let cards = ["far fa-gem", "far fa-gem",
  	 "far fa-heart", "far fa-heart",
@@ -15,11 +13,10 @@ let cards = ["far fa-gem", "far fa-gem",
 
 
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <Header />
-      <Timer />
+
      <Card cards = {cards}/>
     </div>
   );

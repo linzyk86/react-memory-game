@@ -41,7 +41,7 @@ i{
       transform-style: preserve-3d;
 	transition: .4s ease-in-out;
     transform: rotateY(180deg);
-    color: #d7d7d7;;
+    color:  #e8efd5;
     height: 100px;
     width: 100px;
     font-size: 50px;
