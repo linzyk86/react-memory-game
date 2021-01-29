@@ -17,6 +17,7 @@ h3{
 }
 .deck{
     max-width: 80%;
+    width: 500px;
     height: 100%;
     margin: 0 auto;
     background-color: #abd5c7;
@@ -38,7 +39,7 @@ i{
 }
 
  .closed{
-      transform-style: preserve-3d;
+    transform-style: preserve-3d;
 	transition: .4s ease-in-out;
     transform: rotateY(180deg);
     color:  #e8efd5;
@@ -90,7 +91,12 @@ i{
 
 .timer{
     text-align: center;
-    padding: 10px;
+    font-size: 1em;
+    font-family:'Fjalla One', sans-serif;
+}
+.score{
+    text-align: center;
+    padding: 0 20px;
     margin: 10px;
     font-size: 1em;
     font-family:'Fjalla One', sans-serif;

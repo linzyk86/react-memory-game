@@ -13,7 +13,7 @@ let cards = ["far fa-gem", "far fa-gem",
 
 
 
-function App(props) {
+function App() {
   return (
     <div className="App">
 
